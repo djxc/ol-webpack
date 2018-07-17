@@ -1,0 +1,142 @@
+/*----------------------------------------------
+    COMMON  STYLES    
+------------------------------------------------*/
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #f3f3f3;
+  }
+ 
+#main{
+    height: 92%;
+    width: 100%;
+    top: 60px;
+    position: fixed;
+    /*background: rgb(240, 155, 34);*/
+    z-index: 200;
+}
+#map{
+     height: 100%;
+     width:100%;
+     background: #0866C6;
+     z-index: 300;
+}
+
+/**头部菜单:top-navbar:包括一个div，一个ul
+    1.div(navbar-header):包括一个<a>(navbar-brand)(地理信息系统);一个div(sideNav)(显示左侧菜单的符号)
+    2.div(sideNav):
+**/
+.top-navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+    height: 60px;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);  
+    margin:0px;
+   
+    padding:0px;
+    }
+.navbar-header{
+  
+    background: rgb(231, 35, 35);
+}
+.navbar-brand {
+    color: #fff;width: 180px;text-align: left;
+    height: 53px;font-size: 24px;font-weight: 700;
+    line-height: 30px;
+    margin: 7px 0 0 10px;
+   }
+    
+
+.navbar-right{
+    float: right;
+    height: 100%;
+    width: 75%;
+    background-color: #fff;
+}
+/* 一个div(sideNav)(显示左侧菜单的符号) */
+#sideNav{
+    float: right;
+    /* right: 10px; */
+    z-index: 3;
+    color: #868686;
+    cursor:pointer;
+    border-radius: 0;
+    width: 14px;
+    font-size: 30px;
+    line-height: 0;
+    margin: 10px 0 0 10px;
+}
+
+div#sideNav:hover {
+    color: #F09B22;
+}
+
+
+/* 右侧隐藏菜单 */
+ /*左侧菜单*/
+ #left{
+    height: 93%;
+    width: 214px;
+    top: 62px;
+    position: fixed;
+    background: #575757;
+    z-index: 300;
+}
+/* 当左侧菜单被激活时的样式 */
+.active-menu, .active-menu i {
+    background-color: #EDEDED !important;
+    color: #F36A5A !important;
+}
+.active-menu i{color: #F36A5A !important;}
+
+/* 图标 */
+.navbar-side .nav > li > a > i{color: #575757;padding: 13px;
+    width: 30px;
+}
+
+.navbar-side {
+    z-index: 1;
+    position: fixed;
+    width: 214px;
+    top: 61px;
+    z-index: 300;
+    border:none;
+	background:#8C8C8C;
+  }
+
+.sidebar-collapse , .sidebar-collapse .nav{
+	background:none;
+}
+.sidebar-collapse .nav {
+	padding:0;
+}
+.sidebar-collapse .nav > li > a {
+	color: #B8B8B8;
+	background:transparent;
+	text-shadow:none;
+    font-size: 14px;
+    /* left: 10px; */
+}
+.sidebar-collapse > .nav > li > a {
+    padding: 12px 16px; 
+}
+/* 设置每个菜单的样式 */
+.sidebar-collapse > .nav > li {
+    border-bottom: 1px solid rgba(107, 108, 109, 0.19);
+    width: 180px;
+    color: #B8B8B8;
+}
+
+ul.nav.nav-second-level.collapse.in {background: #131212;}
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+    outline:0;
+    /* background: #575757; */
+    color: #F36A5A;
+}

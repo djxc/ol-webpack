@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的地图</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-top">
+            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)">
+                <img src="images/mini.png">
+            </div>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a href="javascript:;">
+                    <i class="my-icon nav-icon icon_1"></i>
+                    <span>地图</span>
+                    <i class="my-icon nav-more"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="javascript:;" id="AddAnno">
+                            <span>
+                                <input type="checkbox" id="isAddAnno" />&nbsp&nbsp标注</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" id="AddRoad">
+                            <span>
+                                <input type="checkbox" id="isAddRoad" />&nbsp&nbsp路网</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" id="AddRS">
+                            <span>
+                                <input type="checkbox" id="isAddRS" />&nbsp&nbsp影像</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;">
+                            <span>系统日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="javascript:;">
+                    <i class="my-icon nav-icon icon_2"></i>
+                    <span>数据管理</span>
+                    <i class="my-icon nav-more"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                            <span id="myDraw">开始编辑 &nbsp &nbsp</span>
+                            <select id="type">
+                                <option value="Point">Point</option>
+                                <option value="LineString">LineString</option>
+                                <option value="Polygon">Polygon</option>
+                                <option value="Circle">Circle</option>
+                                <option value="None">None</option>
+                            </select>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="exportMap">
+                            <span>导出地图</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>站内公告</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <span>登录日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;">
+                    <i class="my-icon nav-icon icon_3"></i>
+                    <span>地理处理</span>
+                    <i class="my-icon nav-more"></i>
+                </a>
+                <ul>
+                    <li>
+                        <a href="javascript:;" id="ShowCoord">
+                            <span>显示坐标</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" >
+                            <span id="myCluster">聚类分析</span>&nbsp&nbsp<input id="distance" value="40"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="Render">
+                            <span>渲染</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="htmleaf-container">
+        <header class="htmleaf-header">
+            <h1>我的地理信息系统</h1>
+        </header>
+    </div>
+    <div id="map" class="map">
+    </div>
+    <!-- 点击弹出窗口 -->
+    <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+    </div>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>
