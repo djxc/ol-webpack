@@ -23,6 +23,7 @@ module.exports = function (map) {
     var myPop = function () {
         if (ispop) {
             map.removeOverlay(overlay);
+            overlayer
             ispop=false;
         } else {
             map.addOverlay(overlay);

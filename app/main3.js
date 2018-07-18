@@ -23,6 +23,7 @@ const myRender = require('./util/myRender');
 const myCluster=require('./util/cluster');
 const myPop=require('./util/mypop');
 const saveAs=require('./js/FileSaver.min.js');
+import addWMS from './util/showWMS';
 // const exportMap=require('./util/exportMap');
 
 
@@ -39,6 +40,7 @@ $("#myDraw").click(myDraw(map()));//开始编辑、停止编辑
 $("#ShowCoord").click(myPop(map()));
 $("#myCluster").click(myCluster(map()));
 $("#Render").click(myRender(map()));
+$("#AddWMS").click(addWMS(map()));
 // $("#exportMap").click(exportMap(map()));
 
 
