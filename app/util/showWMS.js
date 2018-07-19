@@ -88,7 +88,7 @@ var geojsonObject = {
     'crs': {
         'type': 'name',
         'properties': {
-            'name': 'EPSG:3857'
+            'name': 'EPSG:4326'
         }
     },
     'features': [{
@@ -101,29 +101,29 @@ var geojsonObject = {
         'type': 'Feature',
         'geometry': {
             'type': 'LineString',
-            'coordinates': [[4e6, -2e6], [8e6, 2e6]]
+            'coordinates': [[46, -26], [86, 26]]
         }
     }, {
         'type': 'Feature',
         'geometry': {
             'type': 'LineString',
-            'coordinates': [[4e6, 2e6], [8e6, -2e6]]
+            'coordinates': [[46, 26], [86, -26]]
         }
     }, {
         'type': 'Feature',
         'geometry': {
             'type': 'Polygon',
-            'coordinates': [[[-5e6, -1e6], [-4e6, 1e6], [-3e6, -1e6]]]
+            'coordinates': [[[-56, -16], [-46, 16], [-36, -16]]]
         }
     }, {
         'type': 'Feature',
         'geometry': {
             'type': 'MultiLineString',
             'coordinates': [
-                [[-1e6, -7.5e5], [-1e6, 7.5e5]],
-                [[1e6, -7.5e5], [1e6, 7.5e5]],
-                [[-7.5e5, -1e6], [7.5e5, -1e6]],
-                [[-7.5e5, 1e6], [7.5e5, 1e6]]
+                [[-16, -7.55], [-16, 7.55]],
+                [[16, -7.55], [1e6, 7.55]],
+                [[-7.55, -16], [7.55, -16]],
+                [[-7.55, 16], [7.55, 16]]
             ]
         }
     }, {
@@ -131,9 +131,9 @@ var geojsonObject = {
         'geometry': {
             'type': 'MultiPolygon',
             'coordinates': [
-                [[[-5e6, 6e6], [-5e6, 8e6], [-3e6, 8e6], [-3e6, 6e6]]],
-                [[[-2e6, 6e6], [-2e6, 8e6], [0, 8e6], [0, 6e6]]],
-                [[[1e6, 6e6], [1e6, 8e6], [3e6, 8e6], [3e6, 6e6]]]
+                [[[-56, 66], [-56, 86], [-36, 86], [-36, 66]]],
+                [[[-26, 66], [-26, 86], [0, 86], [0, 66]]],
+                [[[16, 66], [16, 86], [36, 86], [36, 66]]]
             ]
         }
     }, {
@@ -142,13 +142,13 @@ var geojsonObject = {
             'type': 'GeometryCollection',
             'geometries': [{
                 'type': 'LineString',
-                'coordinates': [[-5e6, -5e6], [0, -5e6]]
+                'coordinates': [[-56, -56], [0, -56]]
             }, {
                 'type': 'Point',
-                'coordinates': [4e6, -5e6]
+                'coordinates': [46, -56]
             }, {
                 'type': 'Polygon',
-                'coordinates': [[[1e6, -6e6], [2e6, -4e6], [3e6, -6e6]]]
+                'coordinates': [[[16, -66], [26, -46], [36, -66]]]
             }]
         }
     }]
@@ -174,5 +174,7 @@ function addWMS(map) {
 }
 
 
-export default addWMS;
+export default {
+    addWMS
+}
 

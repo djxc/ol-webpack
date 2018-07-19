@@ -83,13 +83,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
-                            <span>站内公告</span>
+                        <a href="javascript:;" id="getFeature">
+                            <span>获取地图要素</span>
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
-                            <span>登录日志</span>
+                        <a href="javascript:;" id="getGeojson">
+                            <span>加载geojson数据</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="Geojsonlayer">
+                            <span>加载geojson图层</span>
                         </a>
                     </li>
                 </ul>
@@ -107,8 +112,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;" >
-                            <span id="myCluster">聚类分析</span>&nbsp&nbsp<input id="distance" value="40"/>
+                        <a href="javascript:;">
+                            <span id="myCluster">聚类分析</span>&nbsp&nbsp
+                            <input id="distance" value="40" />
                         </a>
                     </li>
                     <li>
@@ -118,7 +124,36 @@
                     </li>
                 </ul>
             </li>
-        </ul>
+
+            <li class="nav-item">
+                <a href="javascript:;">
+                    <i class="my-icon nav-icon icon_3"></i>
+                    <span>图层控制</span>
+                    <i class="my-icon nav-more"></i>
+                </a>
+                <ul id="layerContr">
+                    <li>
+                        <a href="javascript:;" id="createPa">
+                            <span>
+                                <input type="checkbox" id="isAddAnno" />&nbsp&nbsp添加节点</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" id="Ad">
+                            <span>
+                                <input type="checkbox" id="isAddRoad" />&nbsp&nbsp路网</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="showLayers">
+                            <span>显示所有图层</span>
+                        </a>
+                    </li>
+
+            </li>
+
+            </ul>
     </div>
 
     <div class="htmleaf-container">
@@ -127,6 +162,11 @@
         </header>
     </div>
     <div id="map" class="map">
+        <div id="contryInfo">
+            显示国家信息：
+            <br>
+            <input id="info">
+        </div>
     </div>
     <!-- 点击弹出窗口 -->
     <div id="popup" class="ol-popup">
@@ -135,6 +175,7 @@
     </div>
 
     <script src="bundle.js"></script>
+
 </body>
 
 </html>

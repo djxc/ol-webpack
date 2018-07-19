@@ -1,0 +1,9 @@
+#contryInfo{   
+    background-color: rosybrown;
+    position: absolute;
+    height: 100px;
+    right: 10px;
+    top: 100px;
+    display: none;
+    z-index: 10;
+}
