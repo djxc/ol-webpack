@@ -2,25 +2,27 @@ import XYZ from 'ol/source/XYZ'
 import Tile from 'ol/layer/Tile';
 import createElement from './layerControl';
 
-
+/**
+ * 加载天地图底图：矢量、影像以及文字标注。需要自己的key
+ */
 var tian_di_tu_road_layer = new Tile({
     title: "天地图路网",
     source: new XYZ({
-        url: "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}"
+        url: "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=b9d6abed32f12b4094773fc6985b9ea3"
     })
 });
 
 var tian_di_tu_satellite_layer = new Tile({
     title: "天地图卫星影像",
     source: new XYZ({
-        url: 'http://t3.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}'
+        url: 'http://t3.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=b9d6abed32f12b4094773fc6985b9ea3'
     })
 });
 
 var tian_di_tu_annotation = new Tile({
     title: "天地图文字标注",
     source: new XYZ({
-        url: 'http://t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}'
+        url: 'http://t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=b9d6abed32f12b4094773fc6985b9ea3'
     })
 });
 
@@ -40,7 +42,11 @@ var changelayersControl = function (map) {
         }
     }
 };
-
+/**
+ * 在页面选择不同的单选按钮，显示不同的底图
+ * @param {*} map 
+ * @param {*} num 
+ */
 function addTDLayer(map, num) {
     switch (num) {
         case 1:

@@ -20,12 +20,10 @@ import getFeature from './util/getFeature';
 import addWMS from './util/showWMS';
 import getGeojson from './util/getGeojson';
 import createElement from './util/layerControl';
-// var x = 110, y = 45;
-// console.log(fromLonLat([y, x], "EPSG:3785"));
+import addWFS from './util/addWFS';
+import jsonFile from './util/jsonFile'
+import addGeojson from './util/sea_level'
 
-// st.student();
-// st.teacher();
-// st.actions();
 inital.showMap();
 $("#AddAnno").click(function(){TDLayer.addTDLayer(inital.getMap(), 1)});
 $("#AddRoad").click(function(){TDLayer.addTDLayer(inital.getMap(), 2)});
@@ -35,6 +33,9 @@ $("#getFeature").click(function(){getFeature.getFreature(inital.getMap())});
 $("#getGeojson").click(function(){addWMS.addWMS(inital.getMap())});
 $("#Geojsonlayer").click(function(){getGeojson.Geojson(inital.getMap())});
 $("#createPa").click(function(){createElement.createParam('dj')});
+$("#addWFS").click(function () { addWFS.testMap(inital.getMap()) });
+$("#jsonfile").click(function () { jsonFile.getJson(inital.getMap()) });
+$("#sea_level").click(function () { addGeojson.addGeojson(inital.getMap()) });
 
 $("#showLayers").click(function(){
     var layers = inital.getMap().getLayers();
